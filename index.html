@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Designsninja">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>AJEL</title>
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+<!-- Core Style Sheets -->
+<link rel="stylesheet" href="assets/css/master.css">
+<!-- Responsive Style Sheets -->
+<link rel="stylesheet" href="assets/css/responsive.css">
+<!-- Revolution Style Sheets -->
+<link rel="stylesheet" type="text/css" href="revolution/css/settings.css">
+<link rel="stylesheet" type="text/css" href="revolution/css/layers.css">
+<link rel="stylesheet" type="text/css" href="revolution/css/navigation.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baumans&display=swap" rel="stylesheet">
+<script src="https://cdn.auth0.com/js/auth0-spa-js/1.20/auth0-spa-js.production.js"></script>
+</head>
+<body>
+
+<!--== Loader Start ==-->
+<div id="loader-overlay">
+  <div class="loader">
+      <div class="loader-inner"></div>
+  </div>
+</div>
+<!--== Loader End ==-->
+
+<!--== Wrapper Start ==-->
+<div class="wrapper">
+
+  <!--== Header Start ==-->
+  <nav class="navbar navbar-default absolute-header navbar-transparent white bootsnav on no-full no-border">
+  	<!--== Start Top Search ==-->
+    <div class="fullscreen-search-overlay" id="search-overlay"> <a href="#" class="fullscreen-close" id="fullscreen-close-button"><i class="icofont icofont-close"></i></a>
+      <div id="fullscreen-search-wrapper">
+        <form method="get" id="fullscreen-searchform">
+          <input type="text" value="" placeholder="Type and hit Enter..." id="fullscreen-search-input" class="search-bar-top">
+          <i class="fullscreen-search-icon icofont icofont-search">
+          <input value="" type="submit">
+          </i>
+        </form>
+      </div>
+    </div>
+    <!--== End Top Search ==-->
+    <div class="container-fluid">
+      <!--== Start Atribute Navigation ==-->
+      <div class="attr-nav hidden-xs sm-display-none">
+        <ul class="social-media-dark social-top">
+          <li><a href="#" class="icofont icofont-social-facebook"></a></li>
+          <li><a href="#" class="icofont icofont-social-twitter"></a></li>
+          <li class="search"><a href="#" id="search-button"><i class="icofont icofont-search"></i></a></li>
+        </ul>
+      </div>
+      <!--== End Atribute Navigation ==-->
+
+      <!--== Start Header Navigation ==-->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"> <i class="tr-icon ion-android-menu"></i> </button>
+        <div class="logo" style=" font-family: 'Baumans', cursive; font-size: 40px;
+        font-weight: 800;"> <a href="index.html" style="color: white;"> AJEL </a> </div>
+      </div>
+      <!--== End Header Navigation ==-->
+
+      <!--== Collect the nav links, forms, and other content for toggling ==-->
+      <!-- <div class="collapse navbar-collapse" id="navbar-menu">
+        <ul class="nav navbar-nav navbar-center" data-in="fadeIn" data-out="fadeOut">
+	<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Concepts</a>
+            <ul class="dropdown-menu">
+              <li><a href="creative-agency.html">Creative Agency</a></li>
+                        <li><a href="digital-agency.html">Digital Agency</a></li>
+                        <li><a href="minimal-agency.html">Minimal Agency</a></li>
+                        <li><a href="design-studio.html">Design Studio</a></li>
+                        <li><a href="landing.html">Landing</a></li>
+                        <li><a href="freelancer.html">Freelancer</a></li>
+                        <li><a href="business.html">Business</a></li>
+                        <li><a href="startups.html">Startups</a></li>
+                        <li><a href="fashion.html">Fashion</a></li>
+                        <li><a href="classic.html">Classic</a></li>
+                        <li><a href="app-landing.html">App Landing</a></li>
+                        <li><a href="web-agency.html">Web Agency</a></li>
+                        <li><a href="parallax-scrolling.html">Parallax Scrolling</a></li>
+                        <li><a href="carousel.html">Carousel</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="video-presentation.html">Video Presentation</a></li>
+                        <li><a href="architect.html">Architect</a></li>
+                        <li><a href="onepage.html">One Page</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown megamenu-fw"> <a href="index.html" class="dropdown-toggle" data-toggle="dropdown">Pages</a>
+            <ul class="dropdown-menu megamenu-content" role="menu">
+              <li>
+                <div class="row">
+                  <div class="col-menu col-md-3">
+                    <h6 class="title">Inner Pages</h6>
+                    <div class="content">
+                      <ul class="menu-col">
+                        <li><a href="about-v1.html">About v1</a></li>
+                        <li><a href="about-v2.html">About v2</a></li>
+                        <li><a href="about-v3.html">About v3</a></li>
+                        <li><a href="about-v4.html">About v4</a></li>
+                        <li><a href="about-v5.html">About v5</a></li>
+                        <li><a href="about-v6.html">About v6</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-menu col-md-3">
+                    <h6 class="title">Inner Pages</h6>
+                    <div class="content">
+                      <ul class="menu-col">
+                        <li><a href="services-creative.html">Services Creative</a></li>
+                        <li><a href="services-classic.html">Services Classic</a></li>
+                        <li><a href="services-startup.html">Services Startup</a></li>
+                        <li><a href="team-creative.html">Team Creative</a></li>
+                        <li><a href="team-startup.html">Team Startup</a></li>
+                        <li><a href="team-carousel.html">Team Carousel</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-menu col-md-3">
+                    <h6 class="title">Inner Pages</h6>
+                    <div class="content">
+                      <ul class="menu-col">
+                        <li><a href="contact-creative.html">Contact Creative</a></li>
+                        <li><a href="contact-classic.html">Contact Classic</a></li>
+                        <li><a href="contact-modern.html">Contact Modern</a></li>
+                        <li><a href="contact-simple.html">Contact Simple</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-menu col-md-3">
+                    <h6 class="title">Inner Pages</h6>
+                    <div class="content">
+                      <ul class="menu-col">
+                        <li><a href="404-page.html">404 Error Page</a></li>
+                        <li><a href="maintenance.html">Maintenance</a></li>
+                        <li><a href="coming-soon.html">Coming Soon</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Default</a>
+                <ul class="dropdown-menu">
+                  <li><a href="default-2col.html">Default 2 Columns</a></li>
+                  <li><a href="default-3col.html">Default 3 Columns</a></li>
+                  <li><a href="default-4col.html">Default 4 Columns</a></li>
+                  <li><a href="default-nospace.html">Default No Space</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Boxed</a>
+                <ul class="dropdown-menu">
+                  <li><a href="boxed-2col.html">Boxed 2 Columns</a></li>
+                  <li><a href="boxed-3col.html">Boxed 3 Columns</a></li>
+                  <li><a href="boxed-4col.html">Boxed 4 Columns</a></li>
+                  <li><a href="boxed-nospace.html">Boxed No Space</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Masonry</a>
+                <ul class="dropdown-menu">
+                  <li><a href="masonry-2col.html">Masonry 2 Columns</a></li>
+                  <li><a href="masonry-3col.html">Masonry 3 Columns</a></li>
+                  <li><a href="masonry-4col.html">Masonry 4 Columns</a></li>
+                  <li><a href="masonry-nospace.html">Masonry No Space</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Metro</a>
+                <ul class="dropdown-menu">
+                  <li><a href="metro-boxed.html">Metro Boxed</a></li>
+                  <li><a href="metro-fullwidth.html">Metro Fullwidth</a></li>
+                </ul>
+              </li>
+			  <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hover Types</a>
+                <ul class="dropdown-menu">
+                  <li><a href="up-transform.html">Up Transform</a></li>
+                  <li><a href="blur-zoom.html">Blur Zoom</a></li>
+                  <li><a href="blur-zoom-with-icons.html">Blur Zoom With Icons</a></li>
+                  <li><a href="dark-overlay.html">Dark Overlay</a></li>
+                  <li><a href="dark-overlay-with-icons.html">Dark Overlay With Icons</a></li>
+                  <li><a href="color-overlay.html">Color Overlay</a></li>
+                  <li><a href="color-overlay-with-icons.html">Color Overlay With Icons</a></li>
+                </ul>
+		     </li>
+             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Single Portfolio</a>
+                <ul class="dropdown-menu">
+                  <li><a href="custom-page-01.html">Custom Page 01</a></li>
+                  <li><a href="custom-page-02.html">Custom Page 02</a></li>
+                  <li><a href="custom-page-03.html">Custom Page 03</a></li>
+				  <li><a href="custom-page-04.html">Custom Page 04</a></li>
+				  <li><a href="custom-page-05.html">Custom Page 05</a></li>
+				  <li><a href="custom-page-06.html">Custom Page 06</a></li>
+				  <li><a href="custom-page-07.html">Custom Page 07</a></li>
+				  <li><a href="custom-page-08.html">Custom Page 08</a></li>
+                </ul>
+			  </li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog</a>
+            <ul class="dropdown-menu">
+              <li><a href="blog-grid.html">Blog Grid</a></li>
+              <li><a href="blog-classic.html">Blog Classic</a></li>
+              <li><a href="blog-fullwidth.html">Blog Fullwidth</a></li>
+              <li><a href="blog-masonry.html">Blog Masonry</a></li>
+			        <li><a href="blog-standard.html">Blog Standard</a></li>
+              <li><a href="blog-detail.html">Blog Detail</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shop</a>
+            <ul class="dropdown-menu">
+              <li><a href="shop-standard.html">Shop Standard</a></li>
+              <li><a href="shop-fullwidth.html">Shop Fullwidth</a></li>
+              <li><a href="shop-with-sidebar.html">Shop with Sidebar</a></li>
+              <li><a href="shop-product.html">Single Product</a></li>
+              <li><a href="shop-cart.html">Shop Cart</a></li>
+              <li><a href="shop-checkout.html">Shop Checkout</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Elememts</a>
+            <ul class="dropdown-menu">
+              <li><a href="accordions.html">Accordions</a></li>
+              <li><a href="animated-text.html">Animated Text</a></li>
+              <li><a href="buttons.html">Buttons</a></li>
+              <li><a href="banner-slider.html">Banner Slider</a></li>
+              <li><a href="call-to-action.html">Call To Action</a></li>
+			        <li><a href="contact-form.html">Contact Form</a></li>
+              <li><a href="clients.html">Clients</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="image-hover.html">Image Hover</a></li>
+              <li><a href="info-box.html">Info Box</a></li>
+              <li><a href="message-box.html">Message Box</a></li>
+              <li><a href="skills.html">Skills</a></li>
+              <li><a href="social-icons.html">Social Icons</a></li>
+              <li><a href="pie-chart.html">Pie Charts</a></li>
+              <li><a href="google-maps.html">Google Maps</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div> -->
+      <!--== /.navbar-collapse ==-->
+    </div>
+  </nav>
+  <!--== Header End ==-->
+
+  <!--== Parallax Slide 01 Start ==-->
+  <section class="fixed-bg remove-padding" style="background-image: url(assets/images/background/american-public-power-association.jpg);" id="slide 1">
+    <div class="overlay-bg"></div>
+  	<div class="container-fluid view-height-100vh relative md-height-600px sm-height-700px xs-height-450px">
+      <div class="simple-content-slider text-center">
+        <div class="simple-content-slider-text">
+          <div class="simple-content-text-inner">
+            <div class="row">
+              <div class="col-md-8 centerize-col col-xs-12">
+                <div class="text-center all-padding-40">
+                  <h1 style="font-family: 'Noto Sans', sans-serif;" class="font-700 font-40px line-height-100 white-color xs-font-30px xs-line-height-30" style="font-weight: 700;">Succeed Sooner</h1>
+                  <h5 class="white-color font-300" style="text-align: left; font-family: 'Alata', sans-serif;"> 
+                    <ul>
+                      <li>
+                        We Help You Succeed Sooner to become a leader within Renewable Energy
+                      </li>
+                      <li>
+                         We think and act for you and on your behalf.
+                      </li>
+                    </ul>
+                  </h5>                
+                    <p class="mt-50">
+                      <a href="#slide 2" class="btn btn-light-outline btn-lg btn-square">
+                        Who Are We?
+                      </a> 
+                    </p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!--== Parallax Slide 01 End ==-->
+
+  <!--== Parallax Slide 02 Start ==-->
+  <section class="fixed-bg remove-padding" style="background-image: url(assets/images/background/andreas-gucklhorn-Ilpf2eUPpUE.jpg);" id="slide 2">
+    <div class="overlay-bg"></div>
+  	<div class="container-fluid view-height-100vh relative md-height-600px sm-height-700px xs-height-450px">
+      <div class="simple-content-slider text-center">
+        <div class="simple-content-slider-text">
+          <div class="simple-content-text-inner">
+            <div class="row">
+              <div class="col-md-8 centerize-col col-xs-12">
+                <div class="text-center all-padding-40">
+                  <h1 style="font-family: 'Noto Sans', sans-serif;" class="font-700 font-40px line-height-100 white-color xs-font-30px xs-line-height-30">Who Are We?</h1>
+                  <h5 class="white-color font-300" style="text-align: left; font-family: 'Alata', sans-serif;">
+                    <ul>
+                      <li>
+                       Creative People That Makes Awesome Things Happen.
+
+                      </li>
+                      <li>
+                        We are the right people who know how to solve real world problems
+                        using technology to achieve best results.
+
+                      </li>
+                      <li>
+                        We don’t design and build for fun (though it is), we do it because it
+                        gives us flexibility to address your needs in the way that works best
+                        for you and your organization.
+                      </li>
+                    </ul>
+                  </h5>
+                  <p class="mt-50"><a href="#slide 3" class="btn btn-light-outline btn-lg btn-square">Our Edge</a> </p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!--== Parallax Slide 02 End ==-->
+
+  <!--== Parallax Slide 03 Start ==-->
+  <section class="fixed-bg remove-padding" style="background-image: url(assets/images/background/anne-nygard-dEOoGC7Y.jpg);" id="slide 3">
+    <div class="overlay-bg"></div>
+  	<div class="container-fluid view-height-100vh relative md-height-600px sm-height-700px xs-height-450px">
+      <div class="simple-content-slider text-center">
+        <div class="simple-content-slider-text">
+          <div class="simple-content-text-inner">
+            <div class="row">
+              <div class="col-md-8 centerize-col col-xs-12">
+                <div class="text-center all-padding-40">
+                  <h1 style="font-family: 'Noto Sans', sans-serif;" class="font-700 font-40px line-height-100 white-color xs-font-30px xs-line-height-30">Our Edge</h1>
+                  <h5 class="white-color font-300" style="text-align: left; font-family: 'Alata', sans-serif;">
+                    <ul>
+                      <li>
+                        Simple, innovative, fit for purpose focusing on short and long term impacts and strategy.
+                      </li>
+                      <li>
+                        Ensure clients are getting what they need and none of what it does not, to enable cost
+efficiency and immediate business value, we think for you on your behalf.
+                      </li>
+                      <li>
+                        Fearless problem solvers.
+                      </li>
+                      <li>
+                        Acute listeners to be efficiency intuitive - clearly understand how the scope today affects
+long term / big picture
+                      </li>
+                      <li>
+                        Keep stakeholder interests as primary focus and provide solution oriented and service
+focussed approach.
+                      </li>
+                      <li>
+                        Bridge gaps between ideas and success through innovation.
+                      </li>
+                      <li>
+                        Cost effective and efficient implementation strategy.
+
+                      </li>
+                      <li>
+                        Anticipate and effectively address needs to provide workable solutions
+                      </li>
+                      <li>
+                         Advocate for change and improvement; innovators and strategic thinkers
+                      </li>
+
+                    </ul>
+                  </h5>
+                  <p class="mt-50"><a href="#slide 4" class="btn btn-light-outline btn-lg btn-square">What We Do Best</a> </p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!--== Parallax Slide 03 End ==-->
+
+  <!--== Parallax Slide 04 Start ==-->
+  <section class="fixed-bg remove-padding" style="background-image: url(assets/images/background/karsten-wurth-0w-uTa0Xz7w.jpg);" id="slide 4">
+    <div class="overlay-bg"></div>
+  	<div class="container-fluid view-height-100vh relative md-height-600px sm-height-700px xs-height-450px">
+      <div class="simple-content-slider text-center">
+        <div class="simple-content-slider-text">
+          <div class="simple-content-text-inner">
+            <div class="row">
+              <div class="col-md-8 centerize-col col-xs-12">
+                <div class="text-center all-padding-40">
+                  <h1 style="font-family: 'Noto Sans', sans-serif;" class="font-700 font-40px line-height-100 white-color xs-font-30px xs-line-height-30">What We Do Best </h1>
+                  <h5 class="white-color font-300" style="text-align: left; font-family: 'Alata', sans-serif;">
+                    <ul>
+                      <li>
+                        Product Quality
+                      </li>
+                      <li>
+                        Stakeholder Value (Research and Development, Business Operations,
+                        Vendor Management, Vendor Evaluations, Strategy, Governance,
+                        Continuous Improvement)
+                      </li>
+                      <li>
+                        ROI
+                      </li>
+                      <li>
+                        Agile Application Implementation - Time / Schedule / Scope
+                      </li>
+                      <li>
+                       Cost Competitiveness
+                      </li>
+                      <li>
+                       Service Quality & Hypercare post Implementation
+                      </li>
+                    </ul>
+                  </h5>
+                  <p class="mt-50"><a href="#slide 5" class="btn btn-light-outline btn-lg btn-square">Experience</a> </p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!--== Parallax Slide 04 End ==-->
+
+  <!--== Parallax Slide 05 Start ==-->
+  <section class="fixed-bg remove-padding" style="background-image: url(assets/images/background/luo-lei-Xa4pTwafe5U.jpg);" id="slide 5">
+    <div class="overlay-bg"></div>
+  	<div class="container-fluid view-height-100vh relative md-height-600px sm-height-700px xs-height-450px">
+      <div class="simple-content-slider text-center">
+        <div class="simple-content-slider-text">
+          <div class="simple-content-text-inner">
+            <div class="row">
+              <div class="col-md-8 centerize-col col-xs-12">
+                <div class="text-center all-padding-40">
+                  <h1 style="font-family: 'Noto Sans', sans-serif;" class="font-700 font-40px line-height-100 white-color xs-font-30px xs-line-height-30">Experience</h1>
+                  <h5 class="white-color font-300" style="text-align: left; font-family: 'Alata', sans-serif;">
+                    <ul>
+                      <li>
+                        Renewable Energy 
+                      </li>
+                      <li>
+                        Midstream Oil and Gas 
+                      </li>
+                      <li>
+                         Utilities  
+                      </li>
+                      <li>                        
+                         Mining 
+                      </li>
+                      <li>                        
+                         Health Care 
+                      </li>
+                      <li>
+                        Transportation 
+                       
+                      </li>
+                      <li>
+                        Apparel (Suits)
+                      </li>
+                    </ul>
+                    <ul class="brands" style="list-style: none;">
+                      <li class="brands__item">
+                        <a href="#">
+                          <img src="/assets/images/cnooc.png" alt="" />
+                        </a>
+                      </li>
+                      <li class="brands__item">
+                        <a href="#">
+                          <img src="/assets/images/altalink.png" alt="" />
+                        </a>
+                      </li>
+                      <li class="brands__item">
+                        <a href="#">
+                          <img src="/assets/images/fortis.png" alt="" />
+                        </a>
+                      </li>
+                      <li class="brands__item">
+                        <a href="#">
+                          <img src="/assets/images/rhs.png" alt="" />
+                        </a>
+                      </li>
+                      <li class="brands__item">
+                        <a href="#">
+                          <img src="/assets/images/blueearth.png" alt="" />
+                        </a>
+                      </li>
+                    </ul>
+                  </h5>
+                  <p class="mt-50"><a href="#slide 6" class="btn btn-light-outline btn-lg btn-square">We understand pain points</a> </p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!--== Parallax Slide 05 End ==-->
+
+<!--== Parallax Slide 06 Start ==-->
+<section class="fixed-bg remove-padding" style="background-image: url(assets/images/background/nicholas-doherty-pONBhDyOFoM.jpg);" id="slide 6">
+  <div class="overlay-bg"></div>
+  <div class="container-fluid view-height-100vh relative md-height-600px sm-height-700px xs-height-450px">
+    <div class="simple-content-slider text-center">
+      <div class="simple-content-slider-text">
+        <div class="simple-content-text-inner">
+          <div class="row">
+            <div class="col-md-8 centerize-col col-xs-12">
+              <div class="text-center all-padding-40">
+                <h1 style="font-family: 'Noto Sans', sans-serif;" class="font-700 font-40px line-height-100 white-color xs-font-30px xs-line-height-30">We understand pain points </h1>
+                <h5 class="white-color font-300" style="text-align: left; font-family: 'Alata', sans-serif;">
+                  <ul>
+                    <li>
+                      Projects have long lifecycles and can’t react to change
+                    </li>
+                    <li>
+                      Processes take priority rather than product
+                      <ul>
+                        <li>
+                          Fixed requirements due to upfront planning, and prioritization, but time and budget are
+variables
+                        </li>
+                        <li>
+                          Initial requirements change by the time application is built
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      Excessive documentation
+                      <ul>
+                        <li>
+                          User requirements have to be complete before implementation
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      Rigid contracts
+                      <ul>
+                        <li>
+                          Development model is lifecycle based
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      Lack of adaptation of product
+                    </li>
+                    <li>
+                      Excessive reviews, approvals and administration
+                    </li>
+                    <li>
+                      Involvement of clients is restricted until product can be delivered based on initial
+requirements
+                    </li>
+                  </ul>
+                </h5>
+                <p class="mt-50"><a href="#slide 7" class="btn btn-light-outline btn-lg btn-square">Our Promise</a> </p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<!--== Parallax Slide 06 End ==-->
+
+<!--== Parallax Slide 07 Start ==-->
+<section class="fixed-bg remove-padding" style="background-image: url(assets/images/background/red-zeppelin-UVGE-o757.jpg);" id="slide 7">
+  <div class="overlay-bg"></div>
+  <div class="container-fluid view-height-100vh relative md-height-600px sm-height-700px xs-height-450px">
+    <div class="simple-content-slider text-center">
+      <div class="simple-content-slider-text">
+        <div class="simple-content-text-inner">
+          <div class="row">
+            <div class="col-md-8 centerize-col col-xs-12">
+              <div class="text-center all-padding-40">
+                <h1 style="font-family: 'Noto Sans', sans-serif;" class="font-700 font-40px line-height-100 white-color xs-font-30px xs-line-height-30">Our Promise </h1>
+                <h5 class="white-color font-300" style="text-align: left; font-family: 'Alata', sans-serif;">
+                  <ul>
+                    <li>
+                      Focus on best results rather than following a strict, predefined plan
+                    </li>
+                    <li>
+                      Deliver business value/desired benefits that provide capacity to
+                      deliver high priority, high quality product
+                      
+                    </li>
+                    <li>
+                      Create long lasting meaningful relationships with stakeholders and customers
+                    </li>
+                  </ul>
+                </h5>
+                <p class="mt-50"><a href="#slide 8" class="btn btn-light-outline btn-lg btn-square">Our Work Style </a> </p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<!--== Parallax Slide 07 End ==-->
+
+<!--== Parallax Slide 08 Start ==-->
+<section class="fixed-bg remove-padding" style="background-image: url(assets/images/background/thomas-reaubourg-JRUVbgJJTBM.jpg);" id="slide 8">
+  <div class="overlay-bg"></div>
+  <div class="container-fluid view-height-100vh relative md-height-600px sm-height-700px xs-height-450px">
+    <div class="simple-content-slider text-center">
+      <div class="simple-content-slider-text">
+        <div class="simple-content-text-inner">
+          <div class="row">
+            <div class="col-md-8 centerize-col col-xs-12">
+              <div class="text-center all-padding-40">
+                <h1 style="font-family: 'Noto Sans', sans-serif;" class="font-700 font-40px line-height-100 white-color xs-font-30px xs-line-height-30">Our Work Style </h1>
+                <h5 class="white-color font-300" style="text-align: left; font-family: 'Alata', sans-serif;">
+                  <ul>
+                    <li>
+                      Satisfy the customer
+                    </li>
+                    <li>
+                      Harness change
+
+                    </li>
+                    <li>
+                      Proactive and incremental
+
+                    </li>
+                    <li>
+                      Create trust through ‘high touch’ leadership
+
+                    </li>
+                    <li>
+                      Encourage face to face conversations rather than slew of emails
+
+                    </li>
+                    <li>
+                      Pursue SIMPLICITY, not complexity
+                    </li>
+                    <li>
+                      Be the Servant Leader by leading projects and not managing them
+
+                    </li>
+                  </ul>
+                </h5>
+                <p class="mt-50"><a href="#slide 9" class="btn btn-light-outline btn-lg btn-square">We help provide a clear strategy and vision</a> </p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<!--== Parallax Slide 08 End ==-->
+
+<!--== Parallax Slide 09 Start ==-->
+<section class="fixed-bg remove-padding" style="background-image: url(assets/images/background/jason-pischke-oizAgQEUVcE.jpg);" id="slide 9">
+  <div class="overlay-bg"></div>
+  <div class="container-fluid view-height-100vh relative md-height-600px sm-height-700px xs-height-450px">
+    <div class="simple-content-slider text-center">
+      <div class="simple-content-slider-text">
+        <div class="simple-content-text-inner">
+          <div class="row">
+            <div class="col-md-8 centerize-col col-xs-12">
+              <div class="text-center all-padding-40">
+                <h1 style="font-family: 'Noto Sans', sans-serif;" class="font-700 font-40px line-height-100 white-color xs-font-30px xs-line-height-30">We help provide a clear strategy and vision </h1>
+                <h5 class="white-color font-300" style="text-align: left; font-family: 'Alata', sans-serif;">
+                  <ul>
+                    <li>
+                    Strategy NEED NOT be complicate. In fact, many of the most successful strategies are no
+                    more than simple guidelines or set of rules.
+                  </li>
+                  <li>
+                     We will help provide a clear appreciation of your Asset Management Program to aid you
+                    in providing an overall direction and a flexible plan to make good choices i.e., we will
+                    help define a clear direction.
+                    <ul>
+                     <li>Where you are?</li>
+                     <li>Where you want to go?</li>
+                     <li>How well you are doing?</li>
+                     <li>What will it take to get there?</li>
+                     <li>How long will it take?</li>
+                    </ul>
+                  </li> 
+                    <li> We will help you solve new problems and not just reliving the old ones.</li>
+                    <li> This assessment helps show the relative level of opportunity that may exist if appropriate
+                    improvements are made to affect reliability and maintenance.</li>
+                    <li> It can help present a broader picture, to lower costs, increased output, revenues, margin
+                    and more efficient use of working capital.</li>
+                  </ul>
+                </h5>
+                <p class="mt-50"><a href="#slide 10" class="btn btn-light-outline btn-lg btn-square">Business of Maintenance Management</a> </p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<!--== Parallax Slide 09 End ==-->
+
+<!--== Parallax Slide 10 Start ==-->
+<section class="fixed-bg remove-padding" style="background-image: url(assets/images/background/chris-abney-gvb84QdErNs.jpg);" id="slide 10">
+  <div class="overlay-bg"></div>
+  <div class="container-fluid view-height-100vh relative md-height-600px sm-height-700px xs-height-450px">
+    <div class="simple-content-slider text-center">
+      <div class="simple-content-slider-text">
+        <div class="simple-content-text-inner">
+          <div class="row">
+            <div class="col-md-8 centerize-col col-xs-12">
+              <div class="text-center all-padding-40">
+                <h1 style="font-family: 'Noto Sans', sans-serif;" class="font-700 font-40px line-height-100 white-color xs-font-30px xs-line-height-30">Business of Maintenance Management </h1>
+                <h5 class="white-color font-300" style="text-align: left; font-family: 'Alata', sans-serif;">
+                  <ul>
+                    <li>
+                       Maintenance Management supports a business to
+
+                      <ul>
+                        <li>Keep productive assets available for use, i.e. helps to achieve maximum value when
+                      in operations.</li>
+
+                       <li>Helps to identify economical approaches to keep asset investments costs and
+                      operating costs down and reliability and service costs up.</li>
+
+                       <li>Minimize the amount of time spent on scheduled maintenance by doing only the
+                      right maintenance.</li>
+
+                       <li>Minimize the downtime created by unscheduled maintenance by being more reliable
+                      that is by consistently and conscientiously performing the right scheduled
+                      maintenance.</li>
+
+                       <li>Helps to identify how to operate an asset so it performs precisely and consistently,
+                      and maintain it easily and inexpensively.</li>
+                      <li> Provide indirectly, improved yield, quality, safety and environmental performance.</li>
+                      <li> Helps make common sense common practice.</li>
+                      </ul>
+                  </li>
+                  </ul>
+                </h5>
+                <p class="mt-50"><a href="#slide 11" class="btn btn-light-outline btn-lg btn-square">Management and Execution vs. Composition
+                  of Asset Maintenance Program</a> </p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<!--== Parallax Slide 10 End ==-->
+
+<!--== Parallax Slide 11 Start ==-->
+<section class="fixed-bg remove-padding" style="background-image: url(assets/images/background/american-public-power-association1.jpg); background-size:x;" id="slide 11">
+  <div class="overlay-bg"></div>
+  <div class="container-fluid view-height-100vh relative md-height-600px sm-height-700px xs-height-450px">
+    <div class="simple-content-slider text-center">
+      <div class="simple-content-slider-text">
+        <div class="simple-content-text-inner">
+          <div class="row">
+            <div class="col-md-8 centerize-col col-xs-12">
+              <div class="text-center all-padding-40">
+                <h1 style="font-family: 'Noto Sans', sans-serif;" class="font-700 font-40px line-height-100 white-color xs-font-30px xs-line-height-30">Management and Execution vs. Composition
+                  of Asset Maintenance Program </h1>
+                <h5 class="white-color font-300" style="text-align: left; font-family: 'Alata', sans-serif;">
+                  <ul>
+                      <li>Efficiency relates to the management and execution of an Asset
+                      maintenance work.</li>
+                      <li>Effectiveness relates to composition of Asset Maintenance program
+                      i.e., how much of it is the right sort of proactive work to lower the
+                      numbers of breakdowns and repairs.</li>
+                    <li> This will help understand if an organization is:
+                      <ul>
+                      <li> Doing the wrong things, the wrong way.</li>
+                      <li> Doing the right things, the wrong way.</li>
+                      <li> Doing the wrong things, the right way.</li>
+                      <li> Doing the right things, the right way.</li>
+                     </ul>
+                    </li>
+                  </ul>
+                </h5>
+                <p class="mt-50"><a href="#slide 12" class="btn btn-light-outline btn-lg btn-square">Outcome of Assessments</a> </p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<!--== Parallax Slide 11 End ==-->
+
+
+<!--== Parallax Slide 12 Start ==-->
+<section class="fixed-bg remove-padding" style="background-image: url(assets/images/background/Alternative\ energy-3.png);" id="slide 12">
+  <div class="overlay-bg"></div>
+  <div class="container-fluid view-height-100vh relative md-height-600px sm-height-700px xs-height-450px">
+    <div class="simple-content-slider text-center">
+      <div class="simple-content-slider-text">
+        <div class="simple-content-text-inner">
+          <div class="row">
+            <div class="col-md-8 centerize-col col-xs-12">
+              <div class="text-center all-padding-40">
+                <h1 style="font-family: 'Noto Sans', sans-serif;" class="font-700 font-40px line-height-100 white-color xs-font-30px xs-line-height-30">Outcome of Assessments</h1>
+                <h5 class="white-color font-300" style="text-align: left; font-family: 'Alata', sans-serif;">
+                  <ul>
+                    <li>Maturity of the Operations</li>
+                    <li>Change attitudes towards maintenance</li>
+                    <li>Avoid expensive work</li>
+                    <li>Keep disruptions to a minimum</li>
+                    <li>Correct deteriorated areas</li>
+                  </ul>
+                </h5>
+                <p class="mt-50"><a href="#slide 13" class="btn btn-light-outline btn-lg btn-square">Take Our Questionire</a> </p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<!--== Parallax Slide 12 End ==-->
+
+<!--== Parallax Slide 13 Start ==-->
+<section class="fixed-bg remove-padding" style="background-image: url(assets/images/background/Alternative\ energy-3.png);" id="slide 13">
+  <div class="overlay-bg"></div>
+  <div class="container-fluid view-height-100vh relative md-height-600px sm-height-700px xs-height-450px">
+    <div class="simple-content-slider text-center">
+      <div class="simple-content-slider-text">
+        <div class="simple-content-text-inner">
+          <div class="row">
+            <div class="col-md-8 centerize-col col-xs-12">
+              <div class="text-center all-padding-40">
+                <h1 style="font-family: 'Noto Sans', sans-serif;" class="font-700 font-40px line-height-100 white-color xs-font-30px xs-line-height-30">Take Our Questionire</h1>
+                <h5 class="white-color font-300" style="text-align: left; font-family: 'Alata', sans-serif;">
+                 
+                </h5>
+                <p class="mt-50"><a href="/Questionire/index.html" class="btn btn-light-outline btn-lg btn-square"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                  </svg></a> </p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<!--== Parallax Slide 13 End ==--> 
+
+  <!--== Footer Start ==-->
+  <footer class="footer">
+    <div class="footer-copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-xs-12">
+            <div class="copy-right text-left">© 2022 <span class="gradient-color"> </span> All rights reserved</div>
+          </div>
+          <div class="col-md-6 col-xs-12">
+            <ul class="social-media">
+              <!-- <li><a href="#" class="icofont icofont-social-facebook"></a></li>
+      			  <li><a href="#" class="icofont icofont-social-twitter"></a></li>
+      			  <li><a href="#" class="icofont icofont-social-behance"></a></li>
+      			  <li><a href="#" class="icofont icofont-social-dribble"></a></li> -->
+           	  <li><a href="#" class="icofont icofont-social-linkedin"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--== Footer End ==-->
+
+  <!--== Go to Top  ==-->
+  <a href="javascript:" id="return-to-top"><i class="icofont icofont-arrow-up"></i></a>
+  <!--== Go to Top End ==-->
+
+</div>
+<!--== Wrapper End ==-->
+
+<!--== Javascript Plugins ==-->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/smoothscroll.js"></script>
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/master.js"></script>
+
+<!-- Revolution js Files -->
+<script>
+  function onLinkClick() {
+  document.getElementsById('slide 2')[3].scrollIntoView({
+    behavior: "smooth"});
+  // will scroll to 4th h3 element
+}
+function onLinkClick() {
+  document.getElementsById('slide 3')[3].scrollIntoView({ behavior: 'smooth'});
+  // will scroll to 4th h3 element
+}
+function onLinkClick() {
+  document.getElementsById('slide 4')[3].scrollIntoView({ behavior: 'smooth'});
+  // will scroll to 4th h3 element
+}
+function onLinkClick() {
+  document.getElementsById('slide 5')[3].scrollIntoView({ behavior: 'smooth'});
+  // will scroll to 4th h3 element
+}
+function onLinkClick() {
+  document.getElementsById('slide 6')[3].scrollIntoView({ behavior: 'smooth'});
+  // will scroll to 4th h3 element
+}
+function onLinkClick() {
+  document.getElementsById('slide 7')[3].scrollIntoView({ behavior: 'smooth'});
+  // will scroll to 4th h3 element
+}
+function onLinkClick() {
+  document.getElementsById('slide 8')[3].scrollIntoView({ behavior: 'smooth'});
+  // will scroll to 4th h3 element
+}
+function onLinkClick() {
+  document.getElementsById('slide 9')[3].scrollIntoView({ behavior: 'smooth'});
+  // will scroll to 4th h3 element
+}
+function onLinkClick() {
+  document.getElementsById('slide 10')[3].scrollIntoView({ behavior: 'smooth'});
+  // will scroll to 4th h3 element
+}
+function onLinkClick() {
+  document.getElementsById('slide 11')[3].scrollIntoView({ behavior: 'smooth'});
+  // will scroll to 4th h3 element
+}
+function onLinkClick() {
+  document.getElementsById('slide 12')[3].scrollIntoView({ behavior: 'smooth'});
+  // will scroll to 4th h3 element
+}
+function onLinkClick() {
+  document.getElementsById('slide 13')[3].scrollIntoView({ behavior: 'smooth'});
+  // will scroll to 4th h3 element
+}
+</script>
+<script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js"></script>
+<!-- <script type="text/javascript" src="revolution/js/revolution.extension.actions.min.js"></script>
+<script type="text/javascript" src="revolution/js/revolution.extension.carousel.min.js"></script>
+<script type="text/javascript" src="revolution/js/revolution.extension.kenburn.min.js"></script>
+<script type="text/javascript" src="revolution/js/revolution.extension.layeranimation.min.js"></script>
+<script type="text/javascript" src="revolution/js/revolution.extension.migration.min.js"></script>
+<script type="text/javascript" src="revolution/js/revolution.extension.navigation.min.js"></script>
+<script type="text/javascript" src="revolution/js/revolution.extension.parallax.min.js"></script>
+<script type="text/javascript" src="revolution/js/revolution.extension.slideanims.min.js"></script>
+<script type="text/javascript" src="revolution/js/revolution.extension.video.min.js"></script>
+ -->
+<!--== Javascript Plugins End ==-->
+
+</body>
+</html>

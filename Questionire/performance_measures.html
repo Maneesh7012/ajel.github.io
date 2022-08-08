@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="MAVIA - Register, Reservation, Questionare, Reviews form wizard">
+	<meta name="author" content="Ansonika">
+	<title>AJEL</title>
+
+	<!-- Favicons-->
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+	<link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+	<link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+	<link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+
+	<!-- GOOGLE WEB FONT -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Baumans&display=swap" rel="stylesheet">
+	<!-- BASE CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+	<link href="css/menu.css" rel="stylesheet">
+	<link href="css/animate.min.css" rel="stylesheet">
+	<link href="css/icon_fonts/css/all_icons_min.css" rel="stylesheet">
+	<link href="css/skins/square/grey.css" rel="stylesheet">
+
+	<!-- YOUR CUSTOM CSS -->
+	<link href="css/custom.css" rel="stylesheet">
+
+	<script src="js/modernizr.js"></script>
+	<!-- Modernizr -->
+
+</head>
+
+<body>
+	
+	<div id="preloader">
+		<div data-loader="circle-side"></div>
+	</div><!-- /Preload -->
+	
+	<div id="loader_form">
+		<div data-loader="circle-side-2"></div>
+	</div><!-- /loader_form -->
+
+	<header>
+		<div class="container-fluid">
+		    <div class="row">
+                <div class="col-3">
+                    <div id="logo_home" style=" font-family: 'Baumans', cursive; font-size: 40px;
+					font-weight: 800;">
+						<a href="#" style="color: rgb(0, 0, 0);"> AJEL </a> 
+					</div>
+                </div>
+                <div class="col-9">
+                    <div id="social">
+                        <ul>
+                            <li><a href="#0"><i class="icon-facebook"></i></a></li>
+                            <li><a href="#0"><i class="icon-twitter"></i></a></li>
+                            <li><a href="#0"><i class="icon-google"></i></a></li>
+                            <li><a href="#0"><i class="icon-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- /social -->
+                    <nav>
+                        <ul class="cd-primary-nav">
+                            <li><a href="index.html" class="animated_link">Register Version</a></li>
+                            <li><a href="reservation_version.html" class="animated_link">Reservation Version</a></li>
+                            <li><a href="questionare_version.html" class="animated_link">Questionare Version</a></li>
+                            <li><a href="review_version.html" class="animated_link">Review Version</a></li>
+                            <li><a href="about.html" class="animated_link">About Us</a></li>
+                            <li><a href="contacts.html" class="animated_link">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+		</div>
+		<!-- container -->
+	</header>
+	<!-- End Header -->
+
+	<main>
+		<div id="form_container">
+			<div class="row">
+				
+				<div class="col-lg-12">
+
+					<div id="wizard_container">
+						<div id="top-wizard">
+							<div id="progressbar"></div>
+						</div>
+						<!-- /top-wizard -->
+						<form name="example-1" id="wrapped">
+							<input id="website" name="website" type="text" value="">
+							<!-- Leave for security protection, read docs for details -->
+							<div id="middle-wizard">
+
+								<div class="step">
+									
+									<div class="row">
+                                        <div class="col-lg-6">
+                                            <div id="left_form5">
+                                                <!-- <figure><img src="img/registration_bg.svg" alt=""></figure> -->
+                                                <h2 style="text-transform: uppercase; font-weight: 900; line-height: 35px;">Performance Measures Assessment</h2>
+                                                
+                                                <a href="#0" id="more_info" data-bs-toggle="modal" data-bs-target="#more-info"><i class="pe-7s-info"></i></a>
+                                            </div>
+                                        </div>
+										<div class="col-md-6" style="font-family: 'Alata', sans-serif;">
+                                            <h3 class="main_question"><strong>Question 1 of 10</strong></h3>
+											<p style="font-weight:900">ELEMENT 5.1 </p>
+											<p style="font-family: 'Alata', sans-serif; font-weight: 600; text-transform: uppercase; line-height: 18px;">5.1 Our focus on performance measures is to improve the overall  performance of the organization, rather than just improving the  measurement numbers. 
+													 
+											</p>
+											<div class="col-md-8 form-group radio_input" style="margin-top: 10%">
+												<label style="margin-bottom: 10px;"><input type="radio" value="0" name="Pma1" onclick="updateAverage(this)" class="icheck" required>Do not know </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="1" name="Pma1" onclick="updateAverage(this)" class="icheck">Never, with few exceptions </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="2" name="Pma1" onclick="updateAverage(this)" class="icheck">Sometimes, but not most times </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="3" name="Pma1" onclick="updateAverage(this)" class="icheck">Frequently, most of the time </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="4" name="Pma1" onclick="updateAverage(this)" class="icheck">Always, with few exceptions </label>
+											</div>
+										</div>
+									</div>
+									<!-- /row -->
+                                    <div id="bottom-wizard" style="bottom: 10px; right:8px;">
+										<button type="button" name="" class="home" title="Home" style="padding-right: 0px"><a href="/Questionire/index.html" style="color: black;">
+											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+												<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+												<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+											  </svg>
+											</a>
+										</button>
+										<button type="button" name="" class="home" title="Save to continue later" style="padding-right: 0px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+											<path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+										  </svg></button>
+										<button type="button" name="backward" class="backward"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+										  </svg></button>
+										<button type="button" name="forward" class="forward" title="Next Question">											
+										  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+										  </svg></button>                                         <!-- <button type="submit" name="submit" class="submit">Submit</button> -->
+                                    </div>
+								</div>
+								<!-- /step-->
+                                <div class="step">
+									<div class="row">
+										<div class="col-lg-6">
+                                            <div id="left_form5">
+                                                <!-- <figure><img src="img/registration_bg.svg" alt=""></figure> -->
+                                                <h2 style="text-transform: uppercase; font-weight: 900; line-height: 35px;">Performance Measures Assessment</h2>
+                                                
+                                                <a href="#0" id="more_info" data-bs-toggle="modal" data-bs-target="#more-info"><i class="pe-7s-info"></i></a>
+                                            </div>
+                                        </div>
+										<div class="col-md-6" style="font-family: 'Alata', sans-serif;">
+                                            <h3 class="main_question"><strong>Question 2 of 10</strong></h3>
+											<p style="font-weight:900">ELEMENT 5.2 </p>
+											<p style="font-family: 'Alata', sans-serif; font-weight: 600; text-transform: uppercase; line-height: 18px;">5.2 Our current performance (including current trends) is reviewed and  discussed with us, during meetings with our supervisors or managers,  or through information posted on notice boards or sent directly to us  (e-mail, newsletters, reports). 
+											</p>
+											<div class="col-md-8 form-group radio_input" style="margin-top: 10%">
+												<label style="margin-bottom: 10px;"><input type="radio" value="0" name="Pma2" onclick="updateAverage(this)" class="icheck" required>Do not know </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="1" name="Pma2" onclick="updateAverage(this)" class="icheck">Never, with few exceptions </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="2" name="Pma2" onclick="updateAverage(this)" class="icheck">Sometimes, but not most times </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="3" name="Pma2" onclick="updateAverage(this)" class="icheck">Frequently, most of the time </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="4" name="Pma2" onclick="updateAverage(this)" class="icheck">Always, with few exceptions </label>
+											</div>
+										</div>
+									</div>
+									<!-- /row -->
+                                    <div id="bottom-wizard" style="bottom: 10px; right:8px;">
+										<button type="button" name="" class="home" title="Home" style="padding-right: 0px"><a href="/Questionire/index.html" style="color: black;">
+											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+												<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+												<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+											  </svg>
+											</a>
+										</button>
+										<button type="button" name="" class="home" title="Save to continue later" style="padding-right: 0px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+											<path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+										  </svg></button>
+										<button type="button" name="backward" class="backward"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+										  </svg></button>
+										<button type="button" name="forward" class="forward" title="Next Question">											
+										  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+										  </svg></button>                                         <!-- <button type="submit" name="submit" class="submit">Submit</button> -->
+                                    </div>
+								</div>
+                                <div class="step">
+									<div class="row">
+                                        <div class="col-lg-6">
+                                            <div id="left_form5">
+                                                <!-- <figure><img src="img/registration_bg.svg" alt=""></figure> -->
+                                                <h2 style="text-transform: uppercase; font-weight: 900; line-height: 35px;">Performance Measures Assessment</h2>
+                                                
+                                                <a href="#0" id="more_info" data-bs-toggle="modal" data-bs-target="#more-info"><i class="pe-7s-info"></i></a>
+                                            </div>
+                                        </div>
+										<div class="col-md-6" style="font-family: 'Alata', sans-serif;">
+                                            <h3 class="main_question"><strong>Question 3 of 10</strong></h3>
+											<p style="font-weight:900">ELEMENT 5.3 </p>
+											<p style="font-family: 'Alata', sans-serif; font-weight: 600; text-transform: uppercase; line-height: 18px;">5.3 We had input into the development of the performance indicators,  and we know how our individual work impacts our group's  performance measures. 
+											</p>											<div class="col-md-8 form-group radio_input" style="margin-top: 10%">
+												<label style="margin-bottom: 10px;"><input type="radio" value="0" name="Pma3" onclick="updateAverage(this)" class="icheck" required>Do not know </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="1" name="Pma3" onclick="updateAverage(this)" class="icheck">Never, with few exceptions </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="2" name="Pma3" onclick="updateAverage(this)" class="icheck">Sometimes, but not most times </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="3" name="Pma3" onclick="updateAverage(this)" class="icheck">Frequently, most of the time </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="4" name="Pma3" onclick="updateAverage(this)" class="icheck">Always, with few exceptions </label>
+											</div>
+										</div>
+									</div>
+									<!-- /row -->
+                                    <div id="bottom-wizard" style="bottom: 10px; right:8px;">
+										<button type="button" name="" class="home" title="Home" style="padding-right: 0px"><a href="/Questionire/index.html" style="color: black;">
+											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+												<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+												<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+											  </svg>
+											</a>
+										</button>
+										<button type="button" name="" class="home" title="Save to continue later" style="padding-right: 0px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+											<path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+										  </svg></button>
+										<button type="button" name="backward" class="backward"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+										  </svg></button>
+										<button type="button" name="forward" class="forward" title="Next Question">											
+										  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+										  </svg></button>                                         <!-- <button type="submit" name="submit" class="submit">Submit</button> -->
+                                    </div>
+								</div>
+                                <div class="step">
+									<div class="row">
+										<div class="col-lg-6">
+                                            <div id="left_form5">
+                                                <!-- <figure><img src="img/registration_bg.svg" alt=""></figure> -->
+                                                <h2 style="text-transform: uppercase; font-weight: 900; line-height: 35px;">Performance Measures Assessment</h2>
+                                                
+                                                <a href="#0" id="more_info" data-bs-toggle="modal" data-bs-target="#more-info"><i class="pe-7s-info"></i></a>
+                                            </div>
+                                        </div>
+										<div class="col-md-6" style="font-family: 'Alata', sans-serif;">
+                                            <h3 class="main_question"><strong>Question 4 of 10</strong></h3>
+											<p style="font-weight:900">ELEMENT 5.4 </p>
+											<p style="font-family: 'Alata', sans-serif; font-weight: 600; text-transform: uppercase; line-height: 18px;">5.4 The linkage from our organizational strategy, mission, and vision to  our performance measures is known. 
+													 
+                                                    
+											</p>
+											<div class="col-md-8 form-group radio_input" style="margin-top: 10%">
+												<label style="margin-bottom: 10px;"><input type="radio" value="0" name="Pma4" onclick="updateAverage(this)" class="icheck" required>Do not know </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="1" name="Pma4" onclick="updateAverage(this)" class="icheck">Never, with few exceptions </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="2" name="Pma4" onclick="updateAverage(this)" class="icheck">Sometimes, but not most times </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="3" name="Pma4" onclick="updateAverage(this)" class="icheck">Frequently, most of the time </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="4" name="Pma4" onclick="updateAverage(this)" class="icheck">Always, with few exceptions </label>
+											</div>
+										</div>
+									</div>
+                                    <div id="bottom-wizard" style="bottom: 10px; right:8px;">
+										<button type="button" name="" class="home" title="Home" style="padding-right: 0px"><a href="/Questionire/index.html" style="color: black;">
+											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+												<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+												<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+											  </svg>
+											</a>
+										</button>
+										<button type="button" name="" class="home" title="Save to continue later" style="padding-right: 0px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+											<path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+										  </svg></button>
+										<button type="button" name="backward" class="backward"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+										  </svg></button>
+										<button type="button" name="forward" class="forward" title="Next Question">											
+										  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+										  </svg></button>                                         <!-- <button type="submit" name="submit" class="submit">Submit</button> -->
+                                    </div>
+									<!-- /row -->
+								</div>
+                                <div class="step">
+									<div class="row">
+										<div class="col-lg-6">
+                                            <div id="left_form5">
+                                                <!-- <figure><img src="img/registration_bg.svg" alt=""></figure> -->
+                                                <h2 style="text-transform: uppercase; font-weight: 900; line-height: 35px;">Performance Measures Assessment</h2>
+                           
+                                                <a href="#0" id="more_info" data-bs-toggle="modal" data-bs-target="#more-info"><i class="pe-7s-info"></i></a>
+                                            </div>
+                                        </div>
+										<div class="col-md-6" style="font-family: 'Alata', sans-serif;">
+                                            <h3 class="main_question"><strong>Question 5 of 10</strong></h3>
+											<p style="font-weight:900">ELEMENT 5.5 </p>
+											<p style="font-family: 'Alata', sans-serif; font-weight: 600; text-transform: uppercase; line-height: 18px;">5.5 Our performance measures drive behaviours that are beneficial for  the overall organization, and do not result in behaviours that are in  conflict with our overall organizational goals. 
+													 
+											</p>
+											<div class="col-md-8 form-group radio_input" style="margin-top: 10%">
+												<label style="margin-bottom: 10px;"><input type="radio" value="0" name="Pma5" onclick="updateAverage(this)" class="icheck" required>Do not know </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="1" name="Pma5" onclick="updateAverage(this)" class="icheck">Never, with few exceptions </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="2" name="Pma5" onclick="updateAverage(this)" class="icheck">Sometimes, but not most times </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="3" name="Pma5" onclick="updateAverage(this)" class="icheck">Frequently, most of the time </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="4" name="Pma5" onclick="updateAverage(this)" class="icheck">Always, with few exceptions </label>
+											</div>
+										</div>
+									</div>
+                                    <div id="bottom-wizard" style="bottom: 10px; right:8px;">
+										<button type="button" name="" class="home" title="Home" style="padding-right: 0px"><a href="/Questionire/index.html" style="color: black;">
+											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+												<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+												<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+											  </svg>
+											</a>
+										</button>
+										<button type="button" name="" class="home" title="Save to continue later" style="padding-right: 0px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+											<path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+										  </svg></button>
+										<button type="button" name="backward" class="backward"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+										  </svg></button>
+										<button type="button" name="forward" class="forward" title="Next Question">											
+										  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+										  </svg></button>                                         <!-- <button type="submit" name="submit" class="submit">Submit</button> -->
+                                    </div>
+									<!-- /row -->
+								</div>
+                                <div class="step">
+									<div class="row">
+										<div class="col-lg-6">
+                                            <div id="left_form5">
+                                                <!-- <figure><img src="img/registration_bg.svg" alt=""></figure> -->
+                                                <h2 style="text-transform: uppercase; font-weight: 900; line-height: 35px;">Performance Measures Assessment</h2>
+                                                
+                                                <a href="#0" id="more_info" data-bs-toggle="modal" data-bs-target="#more-info"><i class="pe-7s-info"></i></a>
+                                            </div>
+                                        </div>
+										<div class="col-md-6" style="font-family: 'Alata', sans-serif;">
+                                            <h3 class="main_question"><strong>Question 6 of 10</strong></h3>
+											<p style="font-weight:900">ELEMENT 5.6 </p>
+											<p style="font-family: 'Alata', sans-serif; font-weight: 600; text-transform: uppercase; line-height: 18px;">5.6 Our performance measures include measures of work processes (e.g.  percent of emergency versus PM maintenance), as well as results. 
+													 
+											</p>
+											<div class="col-md-8 form-group radio_input" style="margin-top: 10%">
+												<label style="margin-bottom: 10px;"><input type="radio" value="0" name="Pma6" onclick="updateAverage(this)" class="icheck" required>Do not know </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="1" name="Pma6" onclick="updateAverage(this)" class="icheck">Never, with few exceptions </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="2" name="Pma6" onclick="updateAverage(this)" class="icheck">Sometimes, but not most times </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="3" name="Pma6" onclick="updateAverage(this)" class="icheck">Frequently, most of the time </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="4" name="Pma6" onclick="updateAverage(this)" class="icheck">Always, with few exceptions </label>
+											</div>
+										</div>
+									</div>
+                                    <div id="bottom-wizard" style="bottom: 10px; right:8px;">
+										<button type="button" name="" class="home" title="Home" style="padding-right: 0px"><a href="/Questionire/index.html" style="color: black;">
+											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+												<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+												<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+											  </svg>
+											</a>
+										</button>
+										<button type="button" name="" class="home" title="Save to continue later" style="padding-right: 0px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+											<path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+										  </svg></button>
+										<button type="button" name="backward" class="backward"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+										  </svg></button>
+										<button type="button" name="forward" class="forward" title="Next Question">											
+										  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+										  </svg></button>                                         <!-- <button type="submit" name="submit" class="submit">Submit</button> -->
+                                    </div>
+									<!-- /row -->
+								</div>
+                                <div class="step">
+									<div class="row">
+                                        <div class="col-lg-6">
+                                            <div id="left_form5">
+                                                <!-- <figure><img src="img/registration_bg.svg" alt=""></figure> -->
+                                                <h2 style="text-transform: uppercase; font-weight: 900; line-height: 35px;">Performance Measures Assessment</h2>
+                                             
+                                                <a href="#0" id="more_info" data-bs-toggle="modal" data-bs-target="#more-info"><i class="pe-7s-info"></i></a>
+                                            </div>
+                                        </div>
+										<div class="col-md-6" style="font-family: 'Alata', sans-serif;">
+                                            <h3 class="main_question"><strong>Question 7 of 10</strong></h3>
+											<p style="font-weight:900">ELEMENT 5.7 </p>	
+											<p style="font-family: 'Alata', sans-serif; font-weight: 600; text-transform: uppercase; line-height: 18px;">5.7 Our performance measures include realistic targets for our group that  we are required to meet. 
+													 
+											</p>										<div class="col-md-8 form-group radio_input" style="margin-top: 10%">
+												<label style="margin-bottom: 10px;"><input type="radio" value="0" name="Pma7" onclick="updateAverage(this)" class="icheck" required>Do not know </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="1" name="Pma7" onclick="updateAverage(this)" class="icheck">Never, with few exceptions </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="2" name="Pma7" onclick="updateAverage(this)" class="icheck">Sometimes, but not most times </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="3" name="Pma7" onclick="updateAverage(this)" class="icheck">Frequently, most of the time </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="4" name="Pma7" onclick="updateAverage(this)" class="icheck">Always, with few exceptions </label>
+											</div>
+										</div>
+									</div>
+                                    <div id="bottom-wizard" style="bottom: 10px; right:8px;">
+										<button type="button" name="" class="home" title="Home" style="padding-right: 0px"><a href="/Questionire/index.html" style="color: black;">
+											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+												<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+												<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+											  </svg>
+											</a>
+										</button>
+										<button type="button" name="" class="home" title="Save to continue later" style="padding-right: 0px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+											<path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+										  </svg></button>
+										<button type="button" name="backward" class="backward"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+										  </svg></button>
+										<button type="button" name="forward" class="forward" title="Next Question">											
+										  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+										  </svg></button>                                         <!-- <button type="submit" name="submit" class="submit">Submit</button> -->
+                                    </div>
+									<!-- /row -->
+								</div>
+                                <div class="step">
+									<div class="row">
+                                        <div class="col-lg-6">
+                                            <div id="left_form5">
+                                                <!-- <figure><img src="img/registration_bg.svg" alt=""></figure> -->
+                                                <h2 style="text-transform: uppercase; font-weight: 900; line-height: 35px;">Performance Measures Assessment</h2>
+                                                
+                                                <a href="#0" id="more_info" data-bs-toggle="modal" data-bs-target="#more-info"><i class="pe-7s-info"></i></a>
+                                            </div>
+                                        </div>
+										<div class="col-md-6" style="font-family: 'Alata', sans-serif;">
+                                            <h3 class="main_question"><strong>Question 8 of 10</strong></h3>
+											<p style="font-weight:900">ELEMENT 5.8 </p>
+											<p style="font-family: 'Alata', sans-serif; font-weight: 600; text-transform: uppercase; line-height: 18px;">5.8 When other groups within our organization work to achieve their  performance goals, it does not have a negative impact on the  performance of our group. 
+													 
+											</p>											<div class="col-md-8 form-group radio_input" style="margin-top: 10%">
+												<label style="margin-bottom: 10px;"><input type="radio" value="0" name="Pma8" onclick="updateAverage(this)" class="icheck" required>Do not know </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="1" name="Pma8" onclick="updateAverage(this)" class="icheck">Never, with few exceptions </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="2" name="Pma8" onclick="updateAverage(this)" class="icheck">Sometimes, but not most times </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="3" name="Pma8" onclick="updateAverage(this)" class="icheck">Frequently, most of the time </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="4" name="Pma8" onclick="updateAverage(this)" class="icheck">Always, with few exceptions </label>
+											</div>
+										</div>
+									</div>
+                                    <div id="bottom-wizard" style="bottom: 10px; right:8px;">
+										<button type="button" name="" class="home" title="Home" style="padding-right: 0px"><a href="/Questionire/index.html" style="color: black;">
+											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+												<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+												<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+											  </svg>
+											</a>
+										</button>
+										<button type="button" name="" class="home" title="Save to continue later" style="padding-right: 0px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+											<path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+										  </svg></button>
+										<button type="button" name="backward" class="backward"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+										  </svg></button>
+										<button type="button" name="forward" class="forward" title="Next Question">											
+										  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+										  </svg></button>                                         <!-- <button type="submit" name="submit" class="submit">Submit</button> -->
+                                    </div>
+									<!-- /row -->
+								</div>
+                                <div class="step">
+									<div class="row">
+                                        <div class="col-lg-6">
+                                            <div id="left_form5">
+                                                <!-- <figure><img src="img/registration_bg.svg" alt=""></figure> -->
+                                                <h2 style="text-transform: uppercase; font-weight: 900; line-height: 35px;">Performance Measures Assessment</h2>
+                                                
+                                                <a href="#0" id="more_info" data-bs-toggle="modal" data-bs-target="#more-info"><i class="pe-7s-info"></i></a>
+                                            </div>
+                                        </div>
+										<div class="col-md-6" style="font-family: 'Alata', sans-serif;">
+                                            <h3 class="main_question"><strong>Question 9 of 10</strong></h3>
+											<p style="font-weight:900">ELEMENT 5.9 </p>	
+											<p style="font-family: 'Alata', sans-serif; font-weight: 600; text-transform: uppercase; line-height: 18px;">5.9 We use the information from our performance measures for analysis  to understand the specific areas we need to improve our  performance. 
+													
+											</p>										<div class="col-md-8 form-group radio_input" style="margin-top: 10%">
+												<label style="margin-bottom: 10px;"><input type="radio" value="0" name="Pma9" onclick="updateAverage(this)" class="icheck" required>Do not know </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="1" name="Pma9" onclick="updateAverage(this)" class="icheck">Never, with few exceptions </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="2" name="Pma9" onclick="updateAverage(this)" class="icheck">Sometimes, but not most times </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="3" name="Pma9" onclick="updateAverage(this)" class="icheck">Frequently, most of the time </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="4" name="Pma9" onclick="updateAverage(this)" class="icheck">Always, with few exceptions </label>
+											</div>
+										</div>
+									</div>
+                                    <div id="bottom-wizard" style="bottom: 10px; right:8px;">
+										<button type="button" name="" class="home" title="Home" style="padding-right: 0px"><a href="/Questionire/index.html" style="color: black;">
+											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+												<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+												<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+											  </svg>
+											</a>
+										</button>
+										<button type="button" name="" class="home" title="Save to continue later" style="padding-right: 0px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+											<path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+										  </svg></button>
+										<button type="button" name="backward" class="backward"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+										  </svg></button>
+										<button type="button" name="forward" class="forward" title="Next Question">											
+										  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+										  </svg></button>                                         <!-- <button type="submit" name="submit" class="submit">Submit</button> -->
+                                    </div>
+									<!-- /row -->
+								</div>
+                                <div class="step">
+									<div class="row">
+                                        <div class="col-lg-6">
+                                            <div id="left_form5">
+                                                <!-- <figure><img src="img/registration_bg.svg" alt=""></figure> -->
+                                                <h2 style="text-transform: uppercase; font-weight: 900; line-height: 35px;">Performance Measures Assessment</h2>
+                                                <a href="#0" id="more_info" data-bs-toggle="modal" data-bs-target="#more-info"><i class="pe-7s-info"></i></a>
+                                            </div>
+                                        </div>
+										<div class="col-md-6" style="font-family: 'Alata', sans-serif;">
+                                            <h3 class="main_question"><strong>Question 10 of 10</strong></h3>
+											<p style="font-weight:900">ELEMENT 5.10 </p>
+											<p style="font-family: 'Alata', sans-serif; font-weight: 600; text-transform: uppercase; line-height: 18px;">5.10 We know how our performance is relative to our competitors, or  other external organizations that perform similar work. </p>
+											<div class="col-md-8 form-group radio_input" style="margin-top: 10%">
+												<label style="margin-bottom: 10px;"><input type="radio" value="0" name="Pma0" onclick="updateAverage(this)" class="icheck" required>Do not know </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="1" name="Pma0" onclick="updateAverage(this)" class="icheck">Never, with few exceptions </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="2" name="Pma0" onclick="updateAverage(this)" class="icheck">Sometimes, but not most times </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="3" name="Pma0" onclick="updateAverage(this)" class="icheck">Frequently, most of the time </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="4" name="Pma0" onclick="updateAverage(this)" class="icheck">Always, with few exceptions </label>
+											</div>
+										</div>
+									</div>
+                                    <div id="bottom-wizard" style="bottom: 10px; right:8px;">
+										<button type="button" name="" class="home" title="Home" style="padding-right: 0px"><a href="/Questionire/index.html" style="color: black;">
+											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+												<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+												<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+											  </svg>
+											</a>
+										</button>
+										<button type="button" name="" class="home" title="Save to continue later" style="padding-right: 0px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+											<path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+										  </svg></button>
+										<button type="button" name="backward" class="backward"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+										  </svg></button>
+										<button type="button" name="forward" class="forward" title="Next Question">	<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z"/>
+										  </svg></button>
+                                        <!-- <button type="submit" name="submit" class="submit">Submit</button> -->
+                                    </div>
+									<!-- /row -->                                    
+								</div>
+                                <div class="step">
+									<div class="row">
+                                        <div class="col-lg-12">
+											<div id="left_form5_main">
+												<!-- <figure><img src="img/registration_bg.svg" alt=""></figure> -->
+												<h2 style="font-family: 'Noto Sans', sans-serif;">Your score for Performance Measures is</h2>
+											
+												<p style="font-family: 'Alata', sans-serif; text-align: center; font-size: 40px;">
+													<span id="score"></span>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div id="bottom-wizard" style="bottom: 35px">
+										<button type="button" name="" class="home" title="Home" style="padding-right: 0px"><a href="/Questionire/index.html" style="color: white;">
+											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+												<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+												<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+											  </svg>
+											</a>
+										</button>
+										<button type="button" name="" class="home" title="Save to continue later" style="padding-right:  30px; color: white;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+											<path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+										  </svg></button>
+										<button type="button" class="test"><a href="/Questionire/management_and_support.html" style="color: white;">Next Question</a>
+                                        <!-- <button type="submit" name="submit" class="submit">Submit</button> -->
+                                    </div>
+									<!-- /row -->                                    
+								</div>
+								
+								<!-- /step-->
+
+								
+							</div>
+							<!-- /middle-wizard -->
+							
+							<!-- /bottom-wizard -->
+						</form>
+					</div>
+					<!-- /Wizard container -->
+				</div>
+			</div><!-- /Row -->
+		</div><!-- /Form_container -->
+	</main>
+	
+	<footer id="home" class="clearfix">
+		<p>© 2022 AJEL</p>
+		<ul>
+			<li><a href="#0" class="animated_link">Privacy Policy </a></li>
+
+			<li><a href="#0" class="animated_link">Terms and conditions</a></li>
+			<li><a href="#0" class="animated_link">Contacts</a></li>
+		</ul>
+	</footer>
+	<!-- end footer-->
+	
+	<div class="cd-overlay-nav">
+		<span></span>
+	</div>
+	<!-- cd-overlay-nav -->
+
+	<div class="cd-overlay-content">
+		<span></span>
+	</div>
+	<!-- cd-overlay-content -->
+
+	<a href="#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
+
+	<!-- Modal terms -->
+	<div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="termsLabel">Terms and conditions</h4>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in <strong>nec quod novum accumsan</strong>, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. Lorem ipsum dolor sit amet, <strong>in porro albucius qui</strong>, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn_1" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+
+	<!-- Modal info -->
+	<div class="modal fade" id="more-info" tabindex="-1" role="dialog" aria-labelledby="more-infoLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="more-infoLabel">Performance Measures Assessment</h4>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Excellence</p>
+					<p>Fully balanced  score cards for  teams.  Improvement  results evident in  performance  trends. 
+						
+						</p>
+					
+					<p>Competence</p>
+					<p>Reliability  measures in use,  improvement  programs  monitored, trends  being developed. 
+						 </p>
+					
+					<p>Understanding</p>
+					<p>Basic maintenance  performance  measures in use. 
+						</p>
+					
+					<p>Awareness</p>
+					<p>Financial measures  used to analyze  spend patterns.  Some downtime  records. 
+						</p>
+					
+					<p>Innocence</p>
+					<p>Only financial  measures watched,  but no analysis of  costs performed.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn_1" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+
+	<!-- SCRIPTS -->
+	<!-- Jquery-->
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<!-- Common script -->
+	<script src="js/common_scripts_min.js"></script>
+	<!-- Wizard script -->
+	<script src="js/registration_wizard_func.js"></script>
+	<!-- Menu script -->
+	<script src="js/velocity.min.js"></script>
+	<script src="js/main.js"></script>
+	<!-- Theme script -->
+	<script src="js/functions.js"></script>
+    <script>
+        function averageTracker(display) {
+            let counter = 0;
+            let total = 0;
+            return function(radioButton) {
+                counter += 1;
+                total += parseInt(radioButton.value);
+                display.innerHTML = (total * 1.0) / counter;
+            }
+        }
+        const updateAverage = averageTracker(document.getElementById("score"));
+    </script>
+
+</body>
+</html>

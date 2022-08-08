@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="MAVIA - Register, Reservation, Questionare, Reviews form wizard">
+	<meta name="author" content="Ansonika">
+	<title>AJEL</title>
+
+	<!-- Favicons-->
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+	<link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+	<link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"
+		href="img/apple-touch-icon-114x114-precomposed.png">
+	<link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
+		href="img/apple-touch-icon-144x144-precomposed.png">
+
+	<!-- GOOGLE WEB FONT -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Baumans&display=swap" rel="stylesheet">
+	<!-- BASE CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+	<link href="css/menu.css" rel="stylesheet">
+	<link href="css/animate.min.css" rel="stylesheet">
+	<link href="css/icon_fonts/css/all_icons_min.css" rel="stylesheet">
+	<link href="css/skins/square/grey.css" rel="stylesheet">
+
+	<!-- YOUR CUSTOM CSS -->
+	<link href="css/custom.css" rel="stylesheet">
+
+	<script src="js/modernizr.js"></script>
+	<!-- Modernizr -->
+
+</head>
+
+<body>
+
+	<div id="preloader">
+		<div data-loader="circle-side"></div>
+	</div><!-- /Preload -->
+
+	<div id="loader_form">
+		<div data-loader="circle-side-2"></div>
+	</div><!-- /loader_form -->
+
+	<header>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-3">
+					<div id="logo_home" style=" font-family: 'Baumans', cursive; font-size: 40px;
+					font-weight: 800;">
+						<a href="#" style="color: rgb(0, 0, 0);"> AJEL </a> 
+					</div>
+				</div>
+				<div class="col-9">
+					<div id="social">
+						<ul>
+							<!-- <li><a href="#0"><i class="icon-facebook"></i></a></li>
+							<li><a href="#0"><i class="icon-twitter"></i></a></li>
+							<li><a href="#0"><i class="icon-google"></i></a></li> -->
+							<li><a href="#0"><i class="icon-linkedin"></i></a></li>
+						</ul>
+					</div>
+					<!-- /social -->
+					<nav>
+						<ul class="cd-primary-nav">
+							<li><a href="index.html" class="animated_link">Register Version</a></li>
+							<li><a href="reservation_version.html" class="animated_link">Reservation Version</a></li>
+							<li><a href="questionare_version.html" class="animated_link">Questionare Version</a></li>
+							<li><a href="review_version.html" class="animated_link">Review Version</a></li>
+							<li><a href="about.html" class="animated_link">About Us</a></li>
+							<li><a href="contacts.html" class="animated_link">Contact Us</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<!-- container -->
+	</header>
+	<!-- End Header -->
+
+	<main>
+		<div id="form_container">
+			<div class="row">
+
+				<div class="col-lg-12">
+
+					<div id="wizard_container">
+						<div id="top-wizard">
+							<div id="progressbar"></div>
+						</div>
+						<!-- /top-wizard -->
+						<form name="example-1" id="wrapped">
+							<input id="website" name="website" type="text" value="">
+							<!-- Leave for security protection, read docs for details -->
+							<div id="middle-wizard">
+
+								<div class="step">
+
+									<div class="row">
+										<div class="col-lg-6">
+											<div id="left_form">
+												<!-- <figure><img src="img/registration_bg.svg" alt=""></figure> -->
+												 <h2 style="text-transform: uppercase; font-weight: 900; line-height: 35px;">Strategy Assessment</h2>
+												<!-- <p style="font-family: 'Alata', sans-serif; font-weight: 600; text-transform: uppercase; line-height: 18px;">1.1 Our organizational strategy, mission, vision, and objectives are
+													well communicated and understood by all within our organization.
+												</p> -->
+												<a href="#0" id="more_info" data-bs-toggle="modal"
+													data-bs-target="#more-info"><i class="pe-7s-info"></i></a>
+											</div>
+										</div>
+										<div class="col-md-6" style="font-family: 'Alata', sans-serif;">
+											<h3 class="main_question"><strong>Question 1 of 10</strong></h3>
+											<p style="font-weight:900">ELEMENT 1.1 </p>
+												<p style="font-family: 'Alata', sans-serif; font-weight: 600; text-transform: uppercase; line-height: 18px;">Our organizational strategy, mission, vision, and objectives are
+													well communicated and understood by all within our organization.
+												</p>
+											<div class="col-md-8 form-group radio_input" style="margin-top: 10%;" >
+												
+												<label style="margin-bottom: 10px;"><input type="radio" value="0" name="Strategy"
+														onclick="updateAverage(this)" class="icheck" required>Do not
+													know </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="1" name="Strategy"
+														onclick="updateAverage(this)" class="icheck">Never, with few
+													exceptions </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="2" name="Strategy"
+														onclick="updateAverage(this)" class="icheck">Sometimes, but not
+													most times </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="3" name="Strategy"
+														onclick="updateAverage(this)" class="icheck">Frequently, most of
+													the time </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="4" name="Strategy"
+														onclick="updateAverage(this)" class="icheck">Always, with few
+													exceptions </label>
+											</div>
+										</div>
+									</div>
+									<!-- /row -->
+									
+									<div id="bottom-wizard" style="bottom: 10px; right:8px;">
+										<button type="button" name="" class="home" title="Home" style="padding-right: 0px"><a href="/Questionire/index.html" style="color: black;">
+											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+												<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+												<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+											  </svg>
+											</a>
+										</button>
+										<button type="button" name="" class="home" title="Save to continue later" style="padding-right: 0px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+											<path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+										  </svg></button>
+										<button type="button" name="forward" class="forward" title="Next Question">										
+										  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+										  </svg>
+										</button> 										<!-- <button type="submit" name="submit" class="submit">Submit</button> -->
+									</div>
+								</div>
+								<!-- /step-->
+								<div class="step">
+									<div class="row">
+										<div class="col-lg-6">
+											<div id="left_form">
+												<!-- <figure><img src="img/registration_bg.svg" alt=""></figure> -->
+												 <h2 style="text-transform: uppercase; font-weight: 900; line-height: 35px;">Strategy Assessment</h2>
+												<a href="#0" id="more_info" data-bs-toggle="modal"
+													data-bs-target="#more-info"><i class="pe-7s-info"></i></a>
+											</div>
+										</div>
+										<div class="col-md-6" style="font-family: 'Alata', sans-serif;">
+											<h3 class="main_question"><strong >Question 2 of 10</strong></h3>
+											<p style="font-weight:900">ELEMENT 1.2 </p>
+											<p style="font-family: 'Alata', sans-serif; font-weight: 600; text-transform: uppercase; line-height: 18px;">1.2 Behaviours of our supervisors, managers, and executives are
+												consistent with our organizational strategy, mission, vision, and
+												objectives. </p>
+											<div class="col-md-8 form-group radio_input" style="margin-top: 10%">
+												<label style="margin-bottom: 10px;"><input type="radio" value="0" name="Strategy1"
+														onclick="updateAverage(this)" class="icheck" required>Do not
+													know </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="1" name="Strategy1"
+														onclick="updateAverage(this)" class="icheck">Never, with few
+													exceptions </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="2" name="Strategy1"
+														onclick="updateAverage(this)" class="icheck">Sometimes, but not
+													most times </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="3" name="Strategy1"
+														onclick="updateAverage(this)" class="icheck">Frequently, most of
+													the time </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="4" name="Strategy1"
+														onclick="updateAverage(this)" class="icheck">Always, with few
+													exceptions </label>
+											</div>
+										</div>
+									</div>
+									<!-- /row -->
+									<div id="bottom-wizard" style="bottom: 10px; right:8px;">
+										<button type="button" name="" class="home" title="Home" style="padding-right: 0px"><a href="/Questionire/index.html" style="color: black;">
+											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+												<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+												<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+											  </svg>
+											</a>
+										</button>
+										<button type="button" name="" class="home" title="Save to continue later" style="padding-right: 0px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+											<path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+										  </svg></button>
+										<button type="button" name="backward" class="backward"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+										  </svg></button>
+										<button type="button" name="forward" class="forward" title="Next Question">											
+										  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+										  </svg></button> 										<!-- <button type="submit" name="submit" class="submit">Submit</button> -->
+									</div>
+								</div>
+								<div class="step">
+									<div class="row">
+										<div class="col-lg-6">
+											<div id="left_form">
+												<!-- <figure><img src="img/registration_bg.svg" alt=""></figure> -->
+												 <h2 style="text-transform: uppercase; font-weight: 900; line-height: 35px;">Strategy Assessment</h2>
+												<a href="#0" id="more_info" data-bs-toggle="modal"
+													data-bs-target="#more-info"><i class="pe-7s-info"></i></a>
+											</div>
+										</div>
+										<div class="col-md-6" style="font-family: 'Alata', sans-serif;">
+											
+											<p style="font-weight:900">ELEMENT 1.3 </p>
+											<h3 class="main_question"><strong >Question 3 of 10</strong></h3>
+											<p style="font-family: 'Alata', sans-serif; font-weight: 600; text-transform: uppercase; line-height: 18px;">1.3 Our organizational objectives drive behaviours in our group that
+												are beneficial to the overall organization. </p>
+											<div class="col-md-8 form-group radio_input" style="margin-top: 10%">
+												<label style="margin-bottom: 10px;"><input type="radio" value="0" name="Strategy3"
+														onclick="updateAverage(this)" class="icheck" required>Do not
+													know </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="1" name="Strategy3"
+														onclick="updateAverage(this)" class="icheck">Never, with few
+													exceptions </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="2" name="Strategy3"
+														onclick="updateAverage(this)" class="icheck">Sometimes, but not
+													most times </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="3" name="Strategy3"
+														onclick="updateAverage(this)" class="icheck">Frequently, most of
+													the time </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="4" name="Strategy3"
+														onclick="updateAverage(this)" class="icheck">Always, with few
+													exceptions </label>
+											</div>
+										</div>
+									</div>
+									<!-- /row -->
+									<div id="bottom-wizard" style="bottom: 10px; right:8px;">
+										<button type="button" name="" class="home" title="Home" style="padding-right: 0px"><a href="/Questionire/index.html" style="color: black;">
+											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+												<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+												<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+											  </svg>
+											</a>
+										</button>
+										<button type="button" name="" class="home" title="Save to continue later" style="padding-right: 0px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+											<path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+										  </svg></button>
+										<button type="button" name="backward" class="backward"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+										  </svg></button>
+										<button type="button" name="forward" class="forward" title="Next Question">											
+										  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+										  </svg></button> 										<!-- <button type="submit" name="submit" class="submit">Submit</button> -->
+									</div>
+								</div>
+								<div class="step">
+									<div class="row">
+										<div class="col-lg-6">
+											<div id="left_form">
+												<!-- <figure><img src="img/registration_bg.svg" alt=""></figure> -->
+												 <h2 style="text-transform: uppercase; font-weight: 900; line-height: 35px;">Strategy Assessment</h2>
+												
+												<a href="#0" id="more_info" data-bs-toggle="modal"
+													data-bs-target="#more-info"><i class="pe-7s-info"></i></a>
+											</div>
+										</div>
+										<div class="col-md-6" style="font-family: 'Alata', sans-serif;">
+											<h3 class="main_question"><strong >Question 4 of 10</strong></h3>
+											<p style="font-weight:900">ELEMENT 1.4 </p>
+
+											<p style="font-family: 'Alata', sans-serif; font-weight: 600; text-transform: uppercase; line-height: 18px;">1.4 Our organizational objectives are useful in setting priorities
+												and in decision-making for our group.
+
+											</p>
+											<div class="col-md-8 form-group radio_input" style="margin-top: 10%">
+												<label style="margin-bottom: 10px;"><input type="radio" value="0" name="Strategy4"
+														onclick="updateAverage(this)" class="icheck" required>Do not
+													know </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="1" name="Strategy4"
+														onclick="updateAverage(this)" class="icheck">Never, with few
+													exceptions </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="2" name="Strategy4"
+														onclick="updateAverage(this)" class="icheck">Sometimes, but not
+													most times </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="3" name="Strategy4"
+														onclick="updateAverage(this)" class="icheck">Frequently, most of
+													the time </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="4" name="Strategy4"
+														onclick="updateAverage(this)" class="icheck">Always, with few
+													exceptions </label>
+											</div>
+										</div>
+									</div>
+									<div id="bottom-wizard" style="bottom: 10px; right:8px;">
+										<button type="button" name="" class="home" title="Home" style="padding-right: 0px"><a href="/Questionire/index.html" style="color: black;">
+											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+												<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+												<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+											  </svg>
+											</a>
+										</button>
+										<button type="button" name="" class="home" title="Save to continue later" style="padding-right: 0px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+											<path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+										  </svg></button>
+										<button type="button" name="backward" class="backward"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+										  </svg></button>
+										<button type="button" name="forward" class="forward" title="Next Question">											
+										  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+										  </svg></button> 										<!-- <button type="submit" name="submit" class="submit">Submit</button> -->
+									</div>
+									<!-- /row -->
+								</div>
+								<div class="step">
+									<div class="row">
+										<div class="col-lg-6">
+											<div id="left_form">
+												<!-- <figure><img src="img/registration_bg.svg" alt=""></figure> -->
+												 <h2 style="text-transform: uppercase; font-weight: 900; line-height: 35px;">Strategy Assessment</h2>
+												
+												<a href="#0" id="more_info" data-bs-toggle="modal"
+													data-bs-target="#more-info"><i class="pe-7s-info"></i></a>
+											</div>
+										</div>
+										<div class="col-md-6" style="font-family: 'Alata', sans-serif;">
+											<h3 class="main_question"><strong >Question 5 of 10</strong></h3>
+											<p style="font-weight:900">ELEMENT 1.5 </p>
+
+											<p style="font-family: 'Alata', sans-serif; font-weight: 600; text-transform: uppercase; line-height: 18px;">1.5 Approved projects and new organizational initiatives are seen as
+												supporting our organizational objectives.
+											</p>
+											<div class="col-md-8 form-group radio_input" style="margin-top: 10%">
+												<label style="margin-bottom: 10px;"><input type="radio" value="0" name="Strategy5"
+														onclick="updateAverage(this)" class="icheck" required>Do not
+													know </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="1" name="Strategy5"
+														onclick="updateAverage(this)" class="icheck">Never, with few
+													exceptions </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="2" name="Strategy5"
+														onclick="updateAverage(this)" class="icheck">Sometimes, but not
+													most times </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="3" name="Strategy5"
+														onclick="updateAverage(this)" class="icheck">Frequently, most of
+													the time </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="4" name="Strategy5"
+														onclick="updateAverage(this)" class="icheck">Always, with few
+													exceptions </label>
+											</div>
+										</div>
+									</div>
+									<div id="bottom-wizard" style="bottom: 10px; right:8px;">
+										<button type="button" name="" class="home" title="Home" style="padding-right: 0px"><a href="/Questionire/index.html" style="color: black;">
+											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+												<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+												<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+											  </svg>
+											</a>
+										</button>
+										<button type="button" name="" class="home" title="Save to continue later" style="padding-right: 0px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+											<path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+										  </svg></button>
+										<button type="button" name="backward" class="backward"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+										  </svg></button>
+										<button type="button" name="forward" class="forward" title="Next Question">											
+										  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+										  </svg></button> 										<!-- <button type="submit" name="submit" class="submit">Submit</button> -->
+									</div>
+									<!-- /row -->
+								</div>
+								<div class="step">
+									<div class="row">
+										<div class="col-lg-6">
+											<div id="left_form">
+												<!-- <figure><img src="img/registration_bg.svg" alt=""></figure> -->
+												 <h2 style="text-transform: uppercase; font-weight: 900; line-height: 35px;">Strategy Assessment</h2>
+												
+												<a href="#0" id="more_info" data-bs-toggle="modal"
+													data-bs-target="#more-info"><i class="pe-7s-info"></i></a>
+											</div>
+										</div>
+										<div class="col-md-6" style="font-family: 'Alata', sans-serif;">
+											<h3 class="main_question"><strong >Question 6 of 10</strong></h3>
+											<p style="font-weight:900">ELEMENT 1.6 </p>
+
+											<p style="font-family: 'Alata', sans-serif; font-weight: 600; text-transform: uppercase; line-height: 18px;">1.6 The work of our department fully supports our overall
+												organizational objectives.
+											</p>
+											<div class="col-md-8 form-group radio_input" style="margin-top: 10%">
+												<label style="margin-bottom: 10px;"><input type="radio" value="0" name="Strategy6"
+														onclick="updateAverage(this)" class="icheck" required>Do not
+													know </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="1" name="Strategy6"
+														onclick="updateAverage(this)" class="icheck">Never, with few
+													exceptions </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="2" name="Strategy6"
+														onclick="updateAverage(this)" class="icheck">Sometimes, but not
+													most times </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="3" name="Strategy6"
+														onclick="updateAverage(this)" class="icheck">Frequently, most of
+													the time </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="4" name="Strategy6"
+														onclick="updateAverage(this)" class="icheck">Always, with few
+													exceptions </label>
+											</div>
+										</div>
+									</div>
+									<div id="bottom-wizard" style="bottom: 10px; right:8px;">
+										<button type="button" name="" class="home" title="Home" style="padding-right: 0px"><a href="/Questionire/index.html" style="color: black;">
+											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+												<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+												<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+											  </svg>
+											</a>
+										</button>
+										<button type="button" name="" class="home" title="Save to continue later" style="padding-right: 0px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+											<path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+										  </svg></button>
+										<button type="button" name="backward" class="backward"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+										  </svg></button>
+										<button type="button" name="forward" class="forward" title="Next Question">											
+										  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+										  </svg></button> 										<!-- <button type="submit" name="submit" class="submit">Submit</button> -->
+									</div>
+									<!-- /row -->
+								</div>
+								<div class="step">
+									<div class="row">
+										<div class="col-lg-6">
+											<div id="left_form">
+												<!-- <figure><img src="img/registration_bg.svg" alt=""></figure> -->
+												 <h2 style="text-transform: uppercase; font-weight: 900; line-height: 35px;">Strategy Assessment</h2>
+												
+												<a href="#0" id="more_info" data-bs-toggle="modal"
+													data-bs-target="#more-info"><i class="pe-7s-info"></i></a>
+											</div>
+										</div>
+										<div class="col-md-6" style="font-family: 'Alata', sans-serif;">
+											<h3 class="main_question"><strong >Question 7 of 10</strong></h3>
+											<p style="font-weight:900">ELEMENT 1.7 </p>
+
+											<p style="font-family: 'Alata', sans-serif; font-weight: 600; text-transform: uppercase; line-height: 18px;">1.7 The work of most departments supports our overall organizational
+												objectives.
+											</p>
+											<div class="col-md-8 form-group radio_input" style="margin-top: 10%">
+												<label style="margin-bottom: 10px;"><input type="radio" value="0" name="Strategy7"
+														onclick="updateAverage(this)" class="icheck" required>Do not
+													know </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="1" name="Strategy7"
+														onclick="updateAverage(this)" class="icheck">Never, with few
+													exceptions </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="2" name="Strategy7"
+														onclick="updateAverage(this)" class="icheck">Sometimes, but not
+													most times </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="3" name="Strategy7"
+														onclick="updateAverage(this)" class="icheck">Frequently, most of
+													the time </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="4" name="Strategy7"
+														onclick="updateAverage(this)" class="icheck">Always, with few
+													exceptions </label>
+											</div>
+										</div>
+									</div>
+									<div id="bottom-wizard" style="bottom: 10px; right:8px;">
+										<button type="button" name="" class="home" title="Home" style="padding-right: 0px"><a href="/Questionire/index.html" style="color: black;">
+											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+												<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+												<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+											  </svg>
+											</a>
+										</button>
+										<button type="button" name="" class="home" title="Save to continue later" style="padding-right: 0px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+											<path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+										  </svg></button>
+										<button type="button" name="backward" class="backward"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+										  </svg></button>
+										<button type="button" name="forward" class="forward" title="Next Question">											
+										  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+										  </svg></button> 										<!-- <button type="submit" name="submit" class="submit">Submit</button> -->
+									</div>
+									<!-- /row -->
+								</div>
+								<div class="step">
+									<div class="row">
+										<div class="col-lg-6">
+											<div id="left_form">
+												<!-- <figure><img src="img/registration_bg.svg" alt=""></figure> -->
+												 <h2 style="text-transform: uppercase; font-weight: 900; line-height: 35px;">Strategy Assessment</h2>
+												
+												<a href="#0" id="more_info" data-bs-toggle="modal"
+													data-bs-target="#more-info"><i class="pe-7s-info"></i></a>
+											</div>
+										</div>
+										<div class="col-md-6" style="font-family: 'Alata', sans-serif;">
+											<h3 class="main_question"><strong >Question 8 of 10</strong></h3>
+											<p style="font-weight:900">ELEMENT 1.8 </p>
+
+											<p style="font-family: 'Alata', sans-serif; font-weight: 600; text-transform: uppercase; line-height: 18px;">1.8 Our organization regularly evaluates its performance in achieving
+												its objectives.
+											</p>
+											<div class="col-md-8 form-group radio_input" style="margin-top: 10%">
+												<label style="margin-bottom: 10px;"><input type="radio" value="0" name="Strategy8"
+														onclick="updateAverage(this)" class="icheck" required>Do not
+													know </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="1" name="Strategy8"
+														onclick="updateAverage(this)" class="icheck">Never, with few
+													exceptions </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="2" name="Strategy8"
+														onclick="updateAverage(this)" class="icheck">Sometimes, but not
+													most times </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="3" name="Strategy8"
+														onclick="updateAverage(this)" class="icheck">Frequently, most of
+													the time </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="4" name="Strategy8"
+														onclick="updateAverage(this)" class="icheck">Always, with few
+													exceptions </label>
+											</div>
+										</div>
+									</div>
+									<div id="bottom-wizard" style="bottom: 10px; right:8px;">
+										<button type="button" name="" class="home" title="Home" style="padding-right: 0px"><a href="/Questionire/index.html" style="color: black;">
+											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+												<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+												<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+											  </svg>
+											</a>
+										</button>
+										<button type="button" name="" class="home" title="Save to continue later" style="padding-right: 0px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+											<path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+										  </svg></button>
+										<button type="button" name="backward" class="backward"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+										  </svg></button>
+										<button type="button" name="forward" class="forward" title="Next Question">											
+										  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+										  </svg></button> 										<!-- <button type="submit" name="submit" class="submit">Submit</button> -->
+									</div>
+									<!-- /row -->
+								</div>
+								<div class="step">
+									<div class="row">
+										<div class="col-lg-6">
+											<div id="left_form">
+												<!-- <figure><img src="img/registration_bg.svg" alt=""></figure> -->
+												 <h2 style="text-transform: uppercase; font-weight: 900; line-height: 35px;">Strategy Assessment</h2>
+												
+												<a href="#0" id="more_info" data-bs-toggle="modal"
+													data-bs-target="#more-info"><i class="pe-7s-info"></i></a>
+											</div>
+										</div>
+										<div class="col-md-6" style="font-family: 'Alata', sans-serif;">
+											<h3 class="main_question"><strong >Question 9 of 10</strong></h3>
+											<p style="font-weight:900">ELEMENT 1.9 </p>
+
+											<p style="font-family: 'Alata', sans-serif; font-weight: 600; text-transform: uppercase; line-height: 18px;">1.9 Long term planning is used to develop our organizational and
+												department budgets. Our budget estimates typically project 3 to 5
+												years in the future.
+											</p>
+											<div class="col-md-8 form-group radio_input" style="margin-top: 10%">
+												<label style="margin-bottom: 10px;"><input type="radio" value="0" name="Strategy9"
+														onclick="updateAverage(this)" class="icheck" required>Do not
+													know </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="1" name="Strategy9"
+														onclick="updateAverage(this)" class="icheck">Never, with few
+													exceptions </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="2" name="Strategy9"
+														onclick="updateAverage(this)" class="icheck">Sometimes, but not
+													most times </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="3" name="Strategy9"
+														onclick="updateAverage(this)" class="icheck">Frequently, most of
+													the time </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="4" name="Strategy9"
+														onclick="updateAverage(this)" class="icheck">Always, with few
+													exceptions </label>
+											</div>
+										</div>
+									</div>
+									<div id="bottom-wizard" style="bottom: 10px; right:8px;">
+										<button type="button" name="" class="home" title="Home" style="padding-right: 0px"><a href="/Questionire/index.html" style="color: black;">
+											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+												<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+												<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+											  </svg>
+											</a>
+										</button>
+										<button type="button" name="" class="home" title="Save to continue later" style="padding-right: 0px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+											<path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+										  </svg></button>
+										<button type="button" name="backward" class="backward"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+										  </svg></button>
+										<button type="button" name="forward" class="forward" title="Next Question">											
+										  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+										  </svg></button> 										<!-- <button type="submit" name="submit" class="submit">Submit</button> -->
+									</div>
+									<!-- /row -->
+								</div>
+								<div class="step">
+									<div class="row">
+										<div class="col-lg-6">
+											<div id="left_form">
+												<!-- <figure><img src="img/registration_bg.svg" alt=""></figure> -->
+												 <h2 style="text-transform: uppercase; font-weight: 900; line-height: 35px;">Strategy Assessment</h2>
+												
+												<a href="#0" id="more_info" data-bs-toggle="modal"
+													data-bs-target="#more-info"><i class="pe-7s-info"></i></a>
+											</div>
+										</div>
+										<div class="col-md-6" style="font-family: 'Alata', sans-serif;">
+											<h3 class="main_question"><strong>Question 10 of 10</strong></h3>
+											<p style="font-weight:900">ELEMENT 1.10 </p>
+
+											<p style="font-family: 'Alata', sans-serif; font-weight: 600; text-transform: uppercase; line-height: 18px;">1.10 Our organizational strategy and tactics are appropriate for our
+												current business context and the economic environment.</p>
+											<div class="col-md-8 form-group radio_input" style="margin-top: 10%">
+												<label style="margin-bottom: 10px;"><input type="radio" value="0" name="Strategy0"
+														onclick="updateAverage(this)" class="icheck" required>Do not
+													know </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="1" name="Strategy0"
+														onclick="updateAverage(this)" class="icheck">Never, with few
+													exceptions </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="2" name="Strategy0"
+														onclick="updateAverage(this)" class="icheck">Sometimes, but not
+													most times </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="3" name="Strategy0"
+														onclick="updateAverage(this)" class="icheck">Frequently, most of
+													the time </label>
+												<label style="margin-bottom: 10px;"><input type="radio" value="4" name="Strategy0"
+														onclick="updateAverage(this)" class="icheck">Always, with few
+													exceptions </label>
+											</div>
+										</div>
+									</div>
+									<div id="bottom-wizard" style="bottom: 10px; right:8px;">
+										<button type="button" name="" class="home" title="Home" style="padding-right: 0px"><a href="/Questionire/index.html" style="color: black;">
+											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+												<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+												<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+											  </svg>
+											</a>
+										</button>
+										<button type="button" name="" class="home" title="Save to continue later" style="padding-right: 0px"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+											<path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+										  </svg></button>
+										<button type="button" name="backward" class="backward"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+										  </svg></button>
+										<button type="button" name="forward" class="forward" title="Next Question">	<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z"/>
+										  </svg></button>
+										<!-- <button type="submit" name="submit" class="submit">Submit</button> -->
+									</div>
+									<!-- /row -->
+								</div>
+								<div class="step">
+									<div class="row">
+										<div class="col-lg-12">
+											<div id="left_form_main">
+												<!-- <figure><img src="img/registration_bg.svg" alt=""></figure> -->
+												<h2 style="font-family: 'Noto Sans', sans-serif;">Your score for Strategy is</h2>
+											
+												<p style="font-family: 'Alata', sans-serif; text-align: center; font-size: 40px;">
+													<span id="score"></span>
+												</p>
+											</div>
+										</div>
+										<div id="bottom-wizard" style="bottom: 35px">
+											<button type="button" name="" class="home" title="Home" style="padding-right: 0px"><a href="/Questionire/index.html" style="color: white;">
+												<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+													<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+													<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+												  </svg>
+												</a>
+											</button>
+											<button type="button" name="" class="home" title="Save to continue later" style="padding-right:  30px; color: white;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+												<path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+											  </svg></button>
+											<button type="button" class="test"><a href="/Questionire/people_and_team.html">Next Question</a>
+												</button>
+											<!-- <button type="submit" name="submit" class="submit">Submit</button> -->
+										</div>
+									</div>
+									<!-- /row -->
+								</div>
+
+								<!-- /step-->
+
+
+							</div>
+							<!-- /middle-wizard -->
+
+							<!-- /bottom-wizard -->
+						</form>
+					</div>
+					<!-- /Wizard container -->
+				</div>
+			</div><!-- /Row -->
+		</div><!-- /Form_container -->
+	</main>
+
+	<footer id="home" class="clearfix">
+		<p>© 2022 AJEL</p>
+		<ul>
+			<li><a href="#0" class="animated_link">Privacy Policy </a></li>
+			<li><a href="#0" class="animated_link">Terms and conditions</a></li>
+			<li><a href="#0" class="animated_link">Contacts</a></li>
+		</ul>
+	</footer>
+	<!-- end footer-->
+
+	<div class="cd-overlay-nav">
+		<span></span>
+	</div>
+	<!-- cd-overlay-nav -->
+
+	<div class="cd-overlay-content">
+		<span></span>
+	</div>
+	<!-- cd-overlay-content -->
+
+	<a href="#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
+
+	<!-- Modal terms -->
+	<div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="termsLabel">Terms and conditions</h4>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in <strong>nec quod novum accumsan</strong>,
+						mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus,
+						pro ne quod dicunt sensibus.</p>
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam
+						dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt
+						sensibus. Lorem ipsum dolor sit amet, <strong>in porro albucius qui</strong>, in nec quod novum
+						accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum
+						sanctus, pro ne quod dicunt sensibus.</p>
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam
+						dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt
+						sensibus.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn_1" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+
+	<!-- Modal info -->
+	<div class="modal fade" id="more-info" tabindex="-1" role="dialog" aria-labelledby="more-infoLabel"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="more-infoLabel">Strategy Assessment</h4>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Excellence</p>
+					<p>Maintenance programs clearly support org strategic goals, well established, documented, &
+						continuously improved. </p>
+					<p>Competence</p>
+					<p>Maintenance strategy & plans align with org strategic goals. Improvements in place. Maintenance
+						is under control.</p>
+					<p>Understanding</p>
+					<p>Management defined strategy & plans. Improvement efforts underway & working.</p>
+					<p>Awareness</p>
+					<p>Documented goals, but no objectives or plans to achieve them. Past attempts at improvement
+						programs have failed.</p>
+					<p>Innocence</p>
+					<p>No documented strategy. Maintenance is largely reactive to breakdowns. </p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn_1" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+
+	<!-- SCRIPTS -->
+	<!-- Jquery-->
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<!-- Common script -->
+	<script src="js/common_scripts_min.js"></script>
+	<!-- Wizard script -->
+	<script src="js/registration_wizard_func.js"></script>
+	<!-- Menu script -->
+	<script src="js/velocity.min.js"></script>
+	<script src="js/main.js"></script>
+	<!-- Theme script -->
+	<script src="js/functions.js"></script>
+	<script>
+		function averageTracker(display) {
+			let counter = 0;
+			let total = 0;
+			return function (radioButton) {
+				counter += 1;
+				total += parseInt(radioButton.value);
+				display.innerHTML = (total * 1.0) / counter;
+			}
+		}
+		const updateAverage = averageTracker(document.getElementById("score"));
+	</script>
+
+</body>
+
+</html>
